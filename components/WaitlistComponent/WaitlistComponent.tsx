@@ -13,7 +13,7 @@ const WaitlistComponent = () => {
 					data-aos-anchor="#example-anchor"
 					data-aos-offset="500"
 					data-aos-duration="500"
-					className="xxs:text-[4rem] text-[3rem] leading-[2.5rem] md:leading-[3rem] font-semibold mb-6 xxs:flex flex-wrap">
+					className="xxs:text-[4rem] text-[3rem] leading-[2.7rem] md:leading-[3rem] font-semibold mb-6 xxs:flex flex-wrap">
 					<span>Be the first to know</span>
 					<div className="flex flex-col sm:items-center md:flex-row md:space-x-3 sm:mt-6">
 						<span className="sm:-mt-4">when</span>
