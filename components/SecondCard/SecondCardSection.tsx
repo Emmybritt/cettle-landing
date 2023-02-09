@@ -18,7 +18,7 @@ const SecondCardSection = () => {
 						Join Waitlist
 					</Link>
 				</button>
-				<div className="mt-10 absolute bottom-[10rem] md:bottom-10 h-[10rem] md:h-[18rem]">
+				<div className="mt-10 absolute sm:bottom-[10rem] bottom-6 md:bottom-10 h-[10rem] md:h-[18rem]">
 					<img src="firstimg.png" alt="Splash screen" className="bottom-0" />
 				</div>
 			</div>
