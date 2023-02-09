@@ -19,7 +19,7 @@ const WaitlistComponent = () => {
 						<span className="sm:-mt-4">when</span>
 						<div className="relative mt-4">
 							<img src="relaunch.png" alt="" />
-							<span className="absolute top-2 sm:top-0 text-white text-[3rem] pl-[2rem] p-[0.3rem]">
+							<span className="absolute font-bold top-2 sm:top-0 text-white text-[3rem] pl-[2rem] p-[0.3rem]">
 								We launch
 							</span>
 						</div>
