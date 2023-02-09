@@ -14,7 +14,7 @@ const SectionOneCard: FC = () => {
 					data-aos="fade-right"
 					className="md:text-[4.5rem] hidden text-[3rem] leading-[3rem] font-semibold mb-6 lg:flex flex-wrap">
 					Get paid to listen
-					<div className="flex space-x-3 mt-6">
+					<div className="flex flex-wrap space-x-3 mt-6">
 						<span className="">to</span>
 						<div className="relative">
 							<img src="bg.png" alt="" />
