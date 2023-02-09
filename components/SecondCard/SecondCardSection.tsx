@@ -1,0 +1,29 @@
+/* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
+import React from "react";
+
+const SecondCardSection = () => {
+	return (
+		<div className="bg-[#FFD051] h-[100vh] relative">
+			<div className="mx-auto w-[80%] md:w-[60%] pt-[6rem] flex items-center flex-col justify-center">
+				<h3 className="text-[#41403C] text-3xl md:text-5xl text-center font-extrabold font-[Red Hat Text]">
+					The ultimate destination for music lovers and industry insiders!
+				</h3>
+				<p className="md:w-[40rem] text-sm text-center px-[2rem] md:px-0 py-6">
+					With our app, you will have access to exclusive new and unreleased music, and be able to earn money for each
+					review you write. Share your honest opinions and help shape the future of the music industry.
+				</p>
+				<button className="bg-[#FFFFFF] px-6 py-3 mt-[2rem] rounded-full">
+					<Link href="waitlist" className="text-sm font-normal">
+						Join Waitlist
+					</Link>
+				</button>
+				<div className="mt-10 absolute bottom-[10rem] md:bottom-10 h-[10rem] md:h-[18rem]">
+					<img src="firstimg.png" alt="Splash screen" className="bottom-0" />
+				</div>
+			</div>
+		</div>
+	);
+};
+
+export default SecondCardSection;
