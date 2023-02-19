@@ -2,6 +2,7 @@
 import AOS from "aos";
 import React, { FC, useEffect } from "react";
 import SouthIcon from "@mui/icons-material/South";
+import Link from "next/link";
 
 const SectionOneCard: FC = () => {
 	useEffect(() => {
@@ -36,8 +37,12 @@ const SectionOneCard: FC = () => {
 					reviewing new and unreleased music.{" "}
 				</p>
 				<div className="flex items-center space-x-8 mt-8">
-					<img src="playstore.png" alt="" />
-					<img src="appstore.png" alt="" />
+					<Link href="/waitlist">
+						<img src="playstore.png" alt="" />
+					</Link>
+					<Link href="/waitlist">
+						<img src="appstore.png" alt="" />
+					</Link>
 				</div>
 			</div>
 			<div className="lg:w-[50%] overflow-hidden relative">
