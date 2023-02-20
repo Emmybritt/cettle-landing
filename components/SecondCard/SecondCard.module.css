@@ -1,0 +1,4 @@
+.textStrokeBorder {
+	/* margin: 0; */
+	-webkit-text-stroke: 0.8px white;
+}

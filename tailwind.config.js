@@ -12,6 +12,13 @@ module.exports = {
     extend: {
       screens: {
         "xxs": "280px"
+      },
+      fontFamily: {
+        DMSans: ['DM Sans', 'sans-serif'],
+        NotoSans: ['Noto Sans', 'sans-serif'],
+        RedHatText: ['Red Hat Text', 'sans-serif'],
+        Rubik: ['Rubik', 'sans-serif'],
+        Raleway: ['Raleway', 'sans-serif'],
       }
     },
   },

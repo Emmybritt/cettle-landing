@@ -32,7 +32,7 @@ const SectionOneCard: FC = () => {
 						</div>
 					</div>
 				</div>
-				<p data-aos="flip-down">
+				<p data-aos="flip-down" className="font-DMSans">
 					Make a real impact on the music industry, get rewarded for your time and attention for listening to and
 					reviewing new and unreleased music.{" "}
 				</p>

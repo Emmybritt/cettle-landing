@@ -1,9 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Noto+Sans&family=Raleway:wght@500&family=Red+Hat+Text:wght@700&family=Rubik:wght@500&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
-
-.redHatText {
-	font-family: "Red Hat Text", sans-serif;
-}
