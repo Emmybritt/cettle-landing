@@ -39,7 +39,7 @@ const Footer: FC = () => {
 							})}
 						</div>
 
-						<div className="flex  justify-center md:justify-start absolute bottom-0 items-end space-x-3 md:mt-6">
+						<div className="flex  justify-center md:justify-start md:absolute bottom-0 items-end space-x-3 md:mt-6">
 							<img className="h-8 w-8" src="facebok.png" alt="facebook" />
 							<img className="h-8 w-8" src="twitter.png" alt="twitter" />
 							<img className="h-8 w-8" src="instagram.png" alt="instagram" />
