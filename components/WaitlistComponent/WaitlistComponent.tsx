@@ -85,6 +85,7 @@ const WaitlistComponent = () => {
 					},
 				},
 			});
+			setForm({});
 			toast("You have been successfully added to our waiting list", { type: "success" });
 		} catch (error: any) {
 			toast(error?.message, { type: "error" });
