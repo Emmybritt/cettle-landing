@@ -227,7 +227,10 @@ const WaitlistComponent = () => {
 						</>
 					)}
 				</div>
-				<button className="bg-[#000000] rounded-full text-white w-[207px] h-[56.12px] mt-6" onClick={handleSubmitForm}>
+				<button
+					disabled={loading}
+					className="bg-[#000000] rounded-full text-white w-[207px] h-[56.12px] mt-6"
+					onClick={handleSubmitForm}>
 					{loading ? "Submitting..." : "Submit"}
 				</button>
 			</div>
