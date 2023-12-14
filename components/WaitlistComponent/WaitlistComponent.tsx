@@ -3,6 +3,7 @@ import { SUBMIT_FORM } from "@/apollo/queries/submit-form";
 import { agentInterest, artistInterest, labelInterest, listenersInterest, userTypes } from "@/datas/data";
 import { useMutation } from "@apollo/client";
 import { Checkbox, Select, TextInput } from "@mantine/core";
+import axios from "axios";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 
@@ -21,7 +22,8 @@ const WaitlistComponent = () => {
 	const [userType, setUserType] = useState<string>("");
 	const [form, setForm] = useState<Form>({});
 	const [errorMsg, setErrormsg] = useState<ErrorType>({});
-	const [CreateCrestalUser, { loading }] = useMutation(SUBMIT_FORM);
+	const [loading, setLoading] = useState<boolean>(false);
+	// const [CreateCrestalUser, { loading }] = useMutation(SUBMIT_FORM);
 
 	function handleChange(name: string, value: string) {
 		if (!value) {
@@ -73,22 +75,26 @@ const WaitlistComponent = () => {
 			if (!form.userPreference || form.userPreference.length <= 0) {
 				return toast("Please select atleast one thing important to you", { type: "error" });
 			}
-			const { data, errors } = await CreateCrestalUser({
-				variables: {
-					createCrestalUser: {
-						email: form?.email,
-						first_name: form?.firstName,
-						last_name: form?.lastName,
-						phone_number: form?.phoneNumber,
-						user_type: form?.userType.toLocaleLowerCase(),
-						userPreference: form.userPreference,
-					},
-				},
+			setLoading(true);
+			// https://server.affilbase.com/api/v1/
+			const response = await axios.post("https://server.affilbase.com/api/v1/create/crestal-user", {
+				firstName: form.firstName,
+				lastName: form.lastName,
+				email: form.email,
+				phoneNumber: form.phoneNumber,
+				userType: form.userType.toLocaleLowerCase(),
+				userPreference: form.userPreference,
 			});
-			setForm({});
-			toast("You have been successfully added to our waiting list", { type: "success" });
+			if (response.data.status === false) {
+				toast(response.data.msg, { type: "error" });
+			} else {
+				toast(response.data.msg, { type: "success" });
+			}
+			console.log(response.data);
+			setLoading(false);
 		} catch (error: any) {
-			toast(error?.message, { type: "error" });
+			setLoading(false);
+			toast(error.response.data[0].msg, { type: "error" });
 		}
 	}
 	return (
